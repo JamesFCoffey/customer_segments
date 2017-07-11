@@ -12151,7 +12151,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-<br>I attempted to predict the feature <strong>Grocery</strong> and was able to predict it with a reporded prediction score of 0.682 (coefficient of determination). The <strong>Grocery</strong> feature is necessary for identifiying customers' spending habits as it had the highest coefficient of determination during prediction out of all the other features.</p>
+<br>I attempted to predict the feature <strong>Grocery</strong> and could predict it with a reported prediction score of 0.682 (coefficient of determination). The <strong>Grocery</strong> feature is not necessary for identifying customers' spending habits. As it had the highest coefficient of determination during prediction out of all the other features, that means it could be easily reconstructed using the other features. Being easily reconstructed from other features, means that the <strong>Grocery</strong> feature does not contain a lot of unique information and is therefore not necessary to understand the customer segments.</p>
 
 </div>
 </div>
@@ -18260,8 +18260,12 @@ oQ6TiIiIiIhIEuowiYiIiIiIJKEOk4iIiIiISBLqMImIiIiIiCShDpOIiIiIiEgS6jCJiIiIiIgk
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong>
-<br>The first and second principal components explain in total 70.68% of the variance in the data. The first four principal components explain in total 93.11% of the variance in the data. The first four dimensions best represent the spending habits of customers in aggregate. That is, for example, detergents and paper products tend to be purchased alongside grocery and milk products, but not with fresh or frozen products.</p>
+<p><strong>Answer:</strong></p>
+<p>The first and second principal components explain in total 70.68% of the variance in the data. The first four principal components explain in total 93.11% of the variance in the data.</p>
+<p>For Dimension 1, there is positive correlation among Milk, Grocery, Detergents_Paper, and to a lesser extent Delicatessen. Fresh and Frozen are negatively correlated with these other features. This means that customer with a high value in Dimension 1 might spend a lot in Milk, Grocery, and Detergents_Paper and very little in Fresh and Frozen. Dimension 1 might therefore represent a customer such as a greengrocer or other retailer.</p>
+<p>For Dimension 2, there is positive correlation among all the features, but primarily among Fresh, Frozen, and Delicatessen. This means that customer with a high value in Dimension 2 might spend a lot in Fresh, Frozen, and Delicatessen with moderate expenditures of the other features. Dimension 2 might therefore represent a customer such as a restaurant.</p>
+<p>For Dimension 3, there is positive correlation among Frozen, Delicatessen, and to a lesser extent Milk. Grocery, Detergents_Paper, and especially Fresh are negatively correlated with these other features. This means that customer with a high value in Dimension 3 might spend a lot in Delicatessen and Frozen and very little in Grocery, Detergents_Paper, and Fresh. Dimension 3 might therefore represent a customer such as a delicatessen.</p>
+<p>For Dimension 4, there is positive correlation among Frozen, Detergents_Paper, Grocery, and Milk. Fresh and Delicatessen are negatively correlated with these other features. This means that customer with a high value in Dimension 4 might spend a lot in Frozen and Detergents_Paper and very little in Fresh and Delicatessen. Dimension 4 might therefore represent a customer such as a convenience store.</p>
 
 </div>
 </div>
